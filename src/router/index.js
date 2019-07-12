@@ -74,13 +74,6 @@ let addRouter = [
     component: Layout,
     children: [
       {
-        path: '/addArticle',
-        iconCls: 'el-icon-edit-outline', // 图标样式class
-        name: routeNmae.publishArticle,
-        component: AddArticle,
-        children: []
-      },
-      {
         path: '/addArticleEditor',
         iconCls: 'el-icon-edit-outline', // 图标样式class
         name: routeNmae.publishArticleEditor,
