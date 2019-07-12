@@ -17,7 +17,6 @@ const Wuji = () => import('@/views/duoji/wuji')
 const Transfer = () => import('@/views/transfer/transfer')
 const DataTable = () => import('@/views/table/dataTables')
 const FilterTable = () => import('@/views/table/filterTable')
-const DragTable = () => import('@/views/table/dragTabe')
 const Upload = () => import('@/views/upload/upload')
 const WangeditorView = () => import('@/views/editor/wangeditorView')
 const NotFound = () => import('@/page404')
@@ -152,13 +151,6 @@ let addRouter = [
         iconCls: 'fa fa-sort-amount-asc', // 图标样式class
         name: routeNmae.filterTable,
         component: FilterTable,
-        children: []
-      },
-      {
-        path: '/dragTabe',
-        iconCls: 'fa fa-hand-stop-o', // 图标样式class
-        name: routeNmae.dragSort,
-        component: DragTable,
         children: []
       }
     ]
