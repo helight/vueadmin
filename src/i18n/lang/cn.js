@@ -6,7 +6,7 @@
  */
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 const cn = {
-  routeNmae: {
+  routeName: {
     home: '主页',
     article: '文章管理',
     publishArticle: '发表文章',
@@ -38,7 +38,8 @@ const cn = {
     'menu4-2': '四级-2',
     'menu5-1': '五级-1',
     systemSettings: '系统设置',
-    navMenu : '导航菜单'
+    navMenu: '导航菜单',
+    adminMange: '后台用户管理'
   },
   rightMenu: {
     close: '关闭',

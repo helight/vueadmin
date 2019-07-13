@@ -20,6 +20,7 @@
     },
     mounted () {
       const _lang = localStorage.lang || 'cn'
+      console.log("lang: ", _lang)
       this.getLanguage(_lang)
     },
     methods: {

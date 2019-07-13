@@ -64,12 +64,13 @@
   </div>
 </template>
 <script>
+import { login } from '@/apis/user'
 export default {
   data () {
     return {
       smdl: true,
       loginForm: {
-        username: 'vue-xuadmin',
+        username: 'admin',
         password: '123456'
       }
     }
@@ -86,7 +87,29 @@ export default {
         return false
       } else {
         // 将 username 设置为 token 存储在 store，仅为测试效果，实际存储 token 以后台返回为准
-        that.$store.dispatch('setToken', that.loginForm.username).then(() => {
+
+        login({ username: that.loginForm.username.trim(), password: that.loginForm.password }).then(response => {
+          console.log("response login: ", response)
+          const { data } = response
+          // commit('SET_TOKEN', data.token)
+          that.$store.dispatch('setToken', data.token).then(() => {
+            that.$router.push({path: '/'})
+          }).catch(res => {
+            that.$message({
+              showClose: true,
+              message: res,
+              type: 'error'
+            })
+          })
+        }).catch(error => {
+          // reject(error)
+          that.$message({
+            showClose: true,
+            message: error,
+            type: 'error'
+          })
+        })
+        /* that.$store.dispatch('setToken', that.loginForm.username).then(() => {
           that.$router.push({path: '/'})
         }).catch(res => {
           that.$message({
@@ -94,7 +117,7 @@ export default {
             message: res,
             type: 'error'
           })
-        })
+        })*/
       }
     },
     message() {

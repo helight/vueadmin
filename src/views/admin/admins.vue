@@ -155,14 +155,6 @@
       </el-table-column>
     </el-table>
 
-    <pagination
-      v-show="total > 0"
-      :total="total"
-      :page.sync="listQuery.page"
-      :limit.sync="listQuery.limit"
-      @pagination="getList"
-    />
-
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
       <el-form
         ref="dataForm"
@@ -279,12 +271,16 @@
 </template>
 
 <script>
-import { requestMenuButton } from '@/api/app/sys/menu'
+/*import { requestMenuButton } from '@/api/app/sys/menu'
 import { requestAll as requestAllRole } from '@/api/app/sys/role'
 import { requestList, requestDetail, requestUpdate, requestCreate, requestDelete, requestAdminsRoleIDList, requestSetRole } from '@/api/app/sys/admins'
 import waves from '@/directive/waves'
 import Pagination from '@/components/Pagination'
 import { checkAuthAdd, checkAuthDel, checkAuthView, checkAuthUpdate, checkAuthSetadminrole } from '@/utils/permission'
+*/
+import waves from '@/utils/waves'
+import { requestAll as requestAllRole } from '@/apis/role'
+import { requestList, requestDetail, requestUpdate, requestCreate, requestDelete, requestAdminsRoleIDList, requestSetRole } from '@/apis/admins'
 
 const statusOptions = [
   { key: 1, display_name: '正常' },
@@ -294,7 +290,7 @@ const statusOptions = [
 
 export default {
   name: 'Admins',
-  components: { Pagination },
+  components: {},
   directives: { waves },
   filters: {
     statusFilter(status) {
@@ -362,7 +358,7 @@ export default {
     }
   },
   created() {
-    this.getMenuButton()
+    // this.getMenuButton()
     this.getList()
     this.getTreeData()
   },

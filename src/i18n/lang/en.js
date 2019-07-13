@@ -4,10 +4,9 @@
  * Date: 2018/12/8
  * Description: 文件描述
  */
-
 import enLocale from 'element-ui/lib/locale/lang/en'
 const en = {
-  routeNmae: {
+  routeName: {
     home: 'home',
     article: 'article',
     publishArticle: 'publishArticle',
@@ -39,7 +38,8 @@ const en = {
     'menu4-2': 'menu4-2',
     'menu5-1': 'menu5-1',
     systemSettings: 'systemSettings',
-    navMenu : 'navMenu',
+    navMenu: 'navMenu',
+    adminMange: 'adminMang'
   },
   rightMenu: {
     close: 'close',
