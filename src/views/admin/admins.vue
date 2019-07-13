@@ -358,24 +358,32 @@ export default {
     }
   },
   created() {
-    // this.getMenuButton()
+    this.getMenuButton()
     this.getList()
     this.getTreeData()
   },
   methods: {
     checkPermission() {
-      this.permissionList.add = checkAuthAdd(this.operationList)
+      /*this.permissionList.add = checkAuthAdd(this.operationList)
       this.permissionList.del = checkAuthDel(this.operationList)
       this.permissionList.view = checkAuthView(this.operationList)
       this.permissionList.update = checkAuthUpdate(this.operationList)
-      this.permissionList.setadminrole = checkAuthSetadminrole(this.operationList)
+      this.permissionList.setadminrole = checkAuthSetadminrole(this.operationList)*/
+      this.permissionList.add = true
+      this.permissionList.del = true
+      this.permissionList.view = true
+      this.permissionList.update = true
+      this.permissionList.setadminrole = true
     },
     getMenuButton() {
-      requestMenuButton('Admins').then(response => {
+      this.operationList = ["add", "del", "view", "update", "setrolemenu", "setadminrole"]
+      this.checkPermission()
+      /* requestMenuButton('Admins').then(response => {
         this.operationList = response.data
       }).then(() => {
         this.checkPermission()
       })
+      */
     },
     getList() {
       this.listLoading = true

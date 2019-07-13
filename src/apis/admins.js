@@ -26,7 +26,7 @@ export function requestUpdate (data) {
 
 export function requestCreate (data) {
   return request({
-    url: '/admins/create',
+    url: '/api/admins/create',
     method: 'post',
     data
   })
