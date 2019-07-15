@@ -156,7 +156,6 @@ let addRouter = [
       }
     ]
   },
-
   {
     path: '/',
     iconCls: 'fa fa-server',
@@ -271,17 +270,17 @@ let addRouter = [
     meta: {role: ['superAdmin']},
     children: [
       {
-        path: '/navClassifies',
-        iconCls: 'el-icon-menu', // 图标样式class
-        name: routeName.navMenu,
-        component: NavClassify,
-        children: []
-      },
-      {
         path: '/adminmange',
         iconCls: 'el-icon-menu', // 图标样式class
         name: routeName.adminMange,
         component: AdminMange,
+        children: []
+      },
+      {
+        path: '/navClassifies',
+        iconCls: 'el-icon-menu', // 图标样式class
+        name: routeName.navMenu,
+        component: NavClassify,
         children: []
       }
     ]

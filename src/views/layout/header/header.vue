@@ -76,7 +76,7 @@
       },
       handleCommand (command) {
         if (command === 'logout') {
-          Cookies.remove('token');
+          Cookies.remove('Admin-Token');
           location.reload()
 
         }

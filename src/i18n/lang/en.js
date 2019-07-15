@@ -39,7 +39,7 @@ const en = {
     'menu5-1': 'menu5-1',
     systemSettings: 'systemSettings',
     navMenu: 'navMenu',
-    adminMange: 'adminMang'
+    adminMange: 'admin'
   },
   rightMenu: {
     close: 'close',

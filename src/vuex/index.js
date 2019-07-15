@@ -9,12 +9,12 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    token: Cookies.get('token')
+    token: Cookies.get('Admin-Token')
   },
   mutations: {
     setToken (state, token) {
       state.token = token
-      Cookies.set('token', token, { expires: 1 / 24 })
+      Cookies.set('Admin-Token', token, { expires: 1 / 24 })
     }
   },
   actions: {
