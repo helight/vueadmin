@@ -1,4 +1,4 @@
-import request from './request'
+import request from '@/utils/request'
 
 export function requestList (query) {
   return request({
@@ -26,7 +26,7 @@ export function requestUpdate (data) {
 
 export function requestCreate (data) {
   return request({
-    url: '/role/create',
+    url: '/api/role/create',
     method: 'post',
     data
   })

@@ -39,7 +39,9 @@ const en = {
     'menu5-1': 'menu5-1',
     systemSettings: 'systemSettings',
     navMenu: 'navMenu',
-    adminMange: 'admin'
+    adminMange: 'admin',
+    roleMange: 'RoleMange',
+    menuMange: 'MenuMange',
   },
   rightMenu: {
     close: 'close',

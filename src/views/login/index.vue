@@ -8,7 +8,7 @@
       </div>
       <div class="loginBox">
         <div class="loginCon">
-          <p class="title">vue-xuadmin权限管理后台模板</p>
+          <p class="title">xuadmin权限管理后台模板</p>
           <p class="title">前台: vue + element-ui</p>
           <el-card shadow="always" class="login-module" v-if="smdl">
             <div slot="header" class="clearfix formTitlt">

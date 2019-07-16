@@ -265,7 +265,7 @@
 </template>
 
 <script>
-import { requestList, requestDetail, requestUpdate, requestCreate, requestAll, requestDelete, requestMenuButton } from '@/api/app/sys/menu'
+import { requestList, requestDetail, requestUpdate, requestCreate, requestAll, requestDelete, requestMenuButton } from '@/apis/menu'
 
 const menuTypeOptions = [
   { key: 1, display_name: '模块' },

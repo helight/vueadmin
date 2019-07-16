@@ -6,6 +6,8 @@ import Login from '@/views/login/index'
 import Layout from '@/views/layout/layout'
 import HomeMain from '@/views/index/mainIndex'
 import AdminMange from '@/views/admin/admins'
+import RoleMange from '@/views/admin/role'
+import MenuMange from '@/views/admin/menu'
 
 // 不是必须加载的组件使用懒加载
 const Icon = () => import('@/views/icon/index')
@@ -274,6 +276,20 @@ let addRouter = [
         iconCls: 'el-icon-menu', // 图标样式class
         name: routeName.adminMange,
         component: AdminMange,
+        children: []
+      },
+      {
+        path: '/rolemange',
+        iconCls: 'el-icon-menu', // 图标样式class
+        name: routeName.roleMange,
+        component: RoleMange,
+        children: []
+      },
+      {
+        path: '/menumange',
+        iconCls: 'el-icon-menu', // 图标样式class
+        name: routeName.menuMange,
+        component: MenuMange,
         children: []
       },
       {

@@ -39,7 +39,9 @@ const cn = {
     'menu5-1': '五级-1',
     systemSettings: '系统设置',
     navMenu: '导航菜单',
-    adminMange: '后台用户管理'
+    adminMange: '用户管理',
+    roleMange: '角色管理',
+    menuMange: '菜单管理',
   },
   rightMenu: {
     close: '关闭',
